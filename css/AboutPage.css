@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root{
+    --color-primary: #0B0C10;
+    --color-primary-varient: #1F2833;
+    --color-white: #ffffff;
+    --color-black: #66FCF1;
+    --color-dark:#45A29E;
+    --transition: 0.4s ease;
+
+}
+body{
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 130%;   
+}
+
+h1 span{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--color-primary);
+
+}
+
+
+
+h3{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 130%;
+    color:var(--color-primary);
+}
+
+p{
+    color: var(--color-dark);
+    line-height: 150%;
+    font-size: 19px;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 14px 32px;
+    font-weight: 500;
+    font-size: 19px;
+    border-radius: 30px;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: var(--transition);
+    color: var(--color-black)
+}
+
+.btn:hover{
+    background-color: var(--color-black);
+    box-shadow: none;
+    color: var(--color-primary)
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1420px;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary-varient);
+}
+
+.logo span{
+    color: var(--color-dark);
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav-links li a{
+    font-size: 19px;
+    color: var(--color-dark);
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-links li a::before{
+    content:  '';
+    width: 0;
+    height: 3px;
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+}
+
+.nav-links li a:hover{
+    color: var(--color-black);
+
+}  
+
+ .nav-links li a:hover::before{
+    width: 100%;
+    transition: var(--transition);
+}
+
+.active{
+    color: var(--color-black) !important;
+}
+
+.active::before{
+    width: 100% !important;
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: auto 30rem;
+    gap: 4rem;
+    align-items: center;
+}
+
+.header-container h3{
+    margin: 0.7rem 0;
+    color: var(--color-primary);
+}
+
+.header-container p{
+    margin: 0 0 1.8rem;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle{
+    height: 28rem;
+    width: 28rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    position: relative;
+    animation: anim linear infinite 40s;
+}
+
+@keyframes anim{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.circle a{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    position: absolute;
+    transition: var(--transition)
+}
+
+.circle a:hover{
+    background-color: var(--color-black);
+}
+
+.circle a:nth-child(1){
+    left: calc(50% - 1rem);
+    top: -1.5rem;
+}
+
+.circle a:nth-child(2){
+    top: calc(50% - 1rem);
+    right: -1.5rem;
+}
+
+.circle a:nth-child(3){
+    top: calc(50% - 1rem);
+    left: -1.5rem;
+}
+
+.circle a:nth-child(4){
+    left: calc(50% - 1rem);
+    bottom: -1.5rem;
+}
+
+.hero-image{
+    position: absolute;
+    height: 23rem;
+    width: 23rem;
+    overflow: hidden;
+    padding: 0rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 48.5%;
+    width: auto;
+    margin-top: -15px;
+    padding: 25px;
+    color: var(--color-black);
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    left: 0; /* Adjust the left position for the 'prev' button */
+  }
+
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: var(--color-primary);
+  }
+  
+
+
